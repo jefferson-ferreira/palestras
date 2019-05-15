@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="evidenciaTeste" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="85392142-7467-4454-9a94-4b0948a676d8">
+	<property name="ireport.zoom" value="3.0000000000000058"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1081"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Heading 4" fontSize="12" isBold="true" isItalic="true"/>
+	<style name="Heading 3" fontSize="14" isBold="true"/>
+	<style name="Heading" fontSize="14"/>
+	<style name="Heading 5" fontSize="11" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Heading 6" hAlign="Left" vAlign="Top" rotation="None" fontSize="10"/>
+	<subDataset name="Table Dataset 1" uuid="9d406310-a9cc-4f7c-9b0b-aed54427e82d">
+		<field name="imagem" class="java.awt.Image"/>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[".\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ARQUIVO" class="java.lang.String"/>
+	<parameter name="SISTEMA" class="java.lang.String"/>
+	<parameter name="SUBSISTEMA" class="java.lang.String"/>
+	<parameter name="MODULO" class="java.lang.String"/>
+	<parameter name="PROJETO" class="java.lang.String"/>
+	<parameter name="REQUISITO_UC" class="java.lang.String"/>
+	<parameter name="ELEMENTO_SOB_TESTE" class="java.lang.String"/>
+	<parameter name="LOGO_CLIENTE" class="java.awt.Image"/>
+	<parameter name="ELABORADO_POR" class="java.lang.String"/>
+	<field name="passoApasso" class="java.lang.String"/>
+	<field name="imagens" class="java.util.List"/>
+	<field name="casoDeTeste" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="falha" class="java.lang.String"/>
+	<group name="Inicio_da_Pagina">
+		<groupExpression><![CDATA[$F{passoApasso}]]></groupExpression>
+		<groupHeader>
+			<band height="57">
+				<staticText>
+					<reportElement isPrintRepeatedValues="false" x="1" y="16" width="550" height="21" isPrintInFirstWholeBand="true" uuid="402d246a-a2e4-48d3-a0f3-da4a055e6552"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="10" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Este documento visa fornecer uma prova dos testes executados para validação de aplicativos.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement isPrintRepeatedValues="false" x="1" y="44" width="210" height="13" isPrintInFirstWholeBand="true" uuid="f0c067fb-41aa-488f-97dd-e51bad70c12d"/>
+					<textElement>
+						<font fontName="Arial" size="10" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[2. EVIDÊNCIAS DOS CASOS DE TESTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" isPrintRepeatedValues="false" x="1" y="2" width="87" height="12" isPrintInFirstWholeBand="true" uuid="dab40ee1-f850-487a-9ffd-ef65d6a1f736"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[1. FINALIDADE]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="135" splitType="Stretch">
+			<rectangle>
+				<reportElement x="140" y="0" width="297" height="55" uuid="4a5d8869-66f0-4a8a-99fb-84831efa75ec"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="0" width="139" height="55" uuid="7e7ddb9e-4294-4382-b42b-12ab431238a8"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<image>
+				<reportElement x="11" y="13" width="120" height="30" uuid="8638f72f-4eef-4cfe-9d4c-32357d55fe52"/>
+				<imageExpression><![CDATA[$P{LOGO_CLIENTE}]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="437" y="0" width="118" height="55" uuid="53540ae8-4150-4ca1-a50c-a204455e06c4"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="140" y="18" width="297" height="20" uuid="8c22a8b6-2a4c-4539-b7b8-ca2d627c9eb6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[EVIDÊNCIAS DE TESTE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2" y="59" width="353" height="13" uuid="fa084d84-7fc9-44f0-b44c-7048f2e40d55"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SISTEMA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="357" y="59" width="198" height="13" uuid="ac7c42c5-b95b-46a7-aec8-1984f9061996"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SUBSISTEMA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="78" width="353" height="13" uuid="12ccb919-cd18-47ae-997a-d180fb9d232c"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MODULO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="357" y="78" width="197" height="13" uuid="32966de7-cb96-42a6-896a-e2e184c71481"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PROJETO}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement mode="Transparent" x="1" y="95" width="554" height="20" uuid="37e4519e-d347-43f2-9ae0-b113309add64"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REQUISITO_UC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="115" width="554" height="20" uuid="a7fd7de4-96d1-4f75-8041-435066dcd137"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+					<paragraph spacingAfter="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ELEMENTO_SOB_TESTE}]]></textFieldExpression>
+			</textField>
+			<elementGroup>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement x="441" y="44" width="100" height="15" forecolor="#000000" uuid="409a0d32-dcc9-4358-a444-00cac6e6712f"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="false" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="443" y="0" width="42" height="14" uuid="8f21ca11-669b-4e5e-9b8a-b0abd682caf0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Página ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="493" y="14" width="13" height="15" uuid="df1431bd-8779-4da2-bdde-60f839ce01b1"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="false" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[de]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="443" y="29" width="41" height="14" uuid="735fc50f-5186-4256-85e6-fc73b0685011"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Data]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="476" y="14" width="13" height="15" uuid="e914b20c-351c-4ee7-825b-575ea3625b85"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="false" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="504" y="14" width="18" height="15" uuid="a2794bdb-ffb8-4100-a275-cc7821eaccec"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="10" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="75" width="354" height="20" uuid="21332316-50ce-44aa-85eb-cde4286cd4a1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="1" y="55" width="354" height="20" uuid="d6ae197b-a424-4e3f-beec-cd75e882d6f9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="355" y="55" width="200" height="20" uuid="7701e8ad-345a-469e-801e-b84232162efe"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="355" y="75" width="200" height="20" uuid="7464a0ea-d634-460f-89bb-c3302b21b312"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="210" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="2" y="48" width="39" height="14" isRemoveLineWhenBlank="true" uuid="42d09cec-22bb-45ef-814c-a67cd77fbfde"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Prova:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table" style="table" x="64" y="62" width="463" height="109" uuid="0a65aee8-af8d-4d69-9d47-71be0f20e148"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table Dataset 1" uuid="76adeec9-e584-4d59-a037-9553b53ba936">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{imagens})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="484" uuid="2acc9248-29f8-4895-baa1-52a8f62a3ad1">
+						<jr:detailCell style="table_TD" height="238" rowSpan="1">
+							<image>
+								<reportElement x="0" y="0" width="484" height="228" uuid="94eeeeaa-0cc9-4fe0-ba8c-e5d38444cba6"/>
+								<imageExpression><![CDATA[$F{imagem}]]></imageExpression>
+							</image>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<break>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="208" width="551" height="1" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="848cd029-f8a4-4a43-ba7c-acf968ff7229"/>
+			</break>
+			<textField>
+				<reportElement positionType="Float" x="104" y="176" width="100" height="13" isRemoveLineWhenBlank="true" forecolor="#0000FF" uuid="1ec44462-74f7-4dcf-b3c3-16938f4ad318"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="11" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}.equals("SUCESSO")?"OK":""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="176" width="101" height="13" isRemoveLineWhenBlank="true" uuid="4d2e42eb-a12d-4c17-921c-f54428107b68"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Resultado do Teste: ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="2" y="190" width="549" height="16" forecolor="#E10000" uuid="069427b8-b78f-44e8-8142-00f542c5714d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{falha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="104" y="176" width="102" height="13" isRemoveLineWhenBlank="true" forecolor="#CC0000" uuid="8c016e41-bd5d-45d0-a68a-249889af9f85"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="Arial" size="10" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}.equals("FALHA")?"NOK":""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="28" width="75" height="14" uuid="d9e7c60f-152f-4fa5-bceb-46ad74bf4fca"/>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font fontName="Arial" size="10" isBold="true" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Passo a passo:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement style="Title" positionType="Float" mode="Transparent" x="53" y="28" width="500" height="14" forecolor="#000000" uuid="abbca024-fb6f-41f3-8abe-e9fb5c0b1af2"/>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font fontName="Arial" size="10" isBold="false" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{passoApasso}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Heading 3" x="2" y="8" width="518" height="12" uuid="da8d198c-9b3e-434b-85d7-da20938510c7"/>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font fontName="Arial" size="10" isBold="false" pdfFontName="Helvetica" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{casoDeTeste}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="44" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="1" width="552" height="1" forecolor="#666666" uuid="8174bd7f-03e4-43b4-ae4f-525dbe2d63cd"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="2" y="3" width="552" height="1" forecolor="#666666" uuid="4a987187-96a6-4703-a71f-0d9aa9f51de2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="2" y="6" width="238" height="36" forecolor="#000000" uuid="80f629d3-05ca-4ee8-bc76-032c67cad991"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ELABORADO_POR}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="2" y="42" width="552" height="1" forecolor="#666666" uuid="d9e5e230-62df-46a6-ab69-8bb9c2d690cd"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement positionType="Float" x="243" y="6" width="311" height="36" uuid="2b8d640f-51f1-43c5-bff1-a7f3b17684a4"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial" size="9" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ARQUIVO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="242" y="3" width="1" height="39" uuid="8d59d7bc-d2e1-4b19-ac7c-6b7f277d4740"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#666666"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch">
+			<printWhenExpression><![CDATA[]]></printWhenExpression>
+		</band>
+	</summary>
+</jasperReport>
