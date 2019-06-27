@@ -23,6 +23,7 @@ public class SuitePalestra extends GenericCenario{
 	@PreCondicoes(preCondicoes = {
 		    @PreCondicao(alvo = Caso_Teste_001.class, casoDeTeste = "casoTeste"),
 		    @PreCondicao(alvo = Caso_Teste_002.class, casoDeTeste = "casoTeste"),
+		    @PreCondicao(alvo = Caso_Teste_003.class, casoDeTeste = "casoTeste"),
 			})
 	public void suiteTest(){
 	}

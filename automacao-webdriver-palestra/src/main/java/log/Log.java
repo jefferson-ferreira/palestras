@@ -19,8 +19,11 @@ public class Log extends GenericLog{
 	
 	public void logInicial(String url){
 		setCaminhoConfiguracoesIniciaisDeLog();
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Inicializou_Navegador));
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Informou_URL) + url);
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Inicializou_Navegador));
+		Log.infoManualUsuario(MensagemLog.getMensagem(EnumLog.MSG_Inicializou_Navegador));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Informou_URL) + url);
+		Log.infoManualUsuario(MensagemLog.getMensagem(EnumLog.MSG_Informou_URL) + url);
+		
 	}
 
 	private void setCaminhoConfiguracoesIniciaisDeLog()

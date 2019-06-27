@@ -3,11 +3,7 @@
  */
 package login;
 
-import java.io.IOException;
-
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -62,28 +58,11 @@ public class PageLoginLogout extends GenericPageObject {
 		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Informou_Senha, "*******"));	
 	}
 
-	public void solicitarLogin() throws IOException {
+	public void solicitarLogin() throws Exception {
 		coletarEvidencia();
 		instancia().botaoEntrar.click();
 		delay(1000);
 		coletarEvidencia();
 		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Botao, "Entrar"));
 	}
-
-	public void realizarLogout() throws IOException{
-		try {
-			webDriver.switchTo().window(
-					getListaJanelas().get(getListaJanelas().size() - 1));
-
-			webDriver.findElement(By.xpath("//*[@id='toolbar']/ul/li[5]/ul/li[5]/a")).click();
-			Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Botao,"Sair"));
-			delay(3500);
-			coletarEvidencia();
-		} catch (NoSuchElementException nsee) {
-			throw new NoSuchElementException(MensagemLog.getMensagem(EnumLog.MSG_Mapeamento_do, 
-					"Botão", "Sair"));
-		}
-
-	}
-
 }

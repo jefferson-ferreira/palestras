@@ -49,43 +49,43 @@ public class MensagemLog implements Serializable {
 	 * 
 	 */
 	public void comparouCampo(String campo, String tela){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Comparacao_Campo, campo, tela));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Comparacao_Campo, campo, tela));
 	}
 	
 	public void comparouFlag(String flag, String tela){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Comparacao_Flag, flag, tela));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Comparacao_Flag, flag, tela));
 	}
 	
 	public void comparouCombo(String combo, String tela){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Comparacao_Combo, combo, tela));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Comparacao_Combo, combo, tela));
 	}
 	
 	public void comparouComboComParametro(String combo, String valor){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Comparacao_Combo_Com_Parametro, combo, valor));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Comparacao_Combo_Com_Parametro, combo, valor));
 	}
 	
 	public void comparouCheck(String check, String tela){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Comparacao_Check, check, tela));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Comparacao_Check, check, tela));
 	}
 	
 	public void informouCampo(String campo){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Informou_Campo, campo));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Informou_Campo, campo));
 	}
 	
 	public void limparCampo(String campo){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Limpou_Campo, campo));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Limpou_Campo, campo));
 	}
 	
 	public void informouCampoComParametro(String campo, String valor){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Informou_Campo_Valor, campo, valor));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Informou_Campo_Valor, campo, valor));
 	}
 	
 	public void informouCampoComDoisParametro(String campo, String valor1, String valor2){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Informou_Campo_Dois_Valor, campo, valor1, valor2));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Informou_Campo_Dois_Valor, campo, valor1, valor2));
 	}
 	
 	public void clicouBotao(String botao){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Botao, botao));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Botao, botao));
 	}
 	
 	/**
@@ -93,87 +93,91 @@ public class MensagemLog implements Serializable {
 	 * 
 	 */
 	public void clicouBotaoComParametro(String botao, String tela){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Botao_Com_Parametro, botao, tela));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Botao_Com_Parametro, botao, tela));
 	}
 	
 	public void clicouBotaoComParametro2(String botao, String valor){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Botao_Parametro, botao, valor));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Botao_Parametro, botao, valor));
 	}
 	
 	public void clicouBotaoComParametroGrid(String botao, String valor){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Botao_Grid, botao, valor));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Botao_Grid, botao, valor));
 	}
 	
 	public void clicouCampo(String campo){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Campo, campo));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Campo, campo));
 	}
 	
 	public void marcouCheck(String check){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Marcou_Check, check));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Marcou_Check, check));
 	}
 	
 	public void desmarcouCheck(String check){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Desmarcou_Check, check));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Desmarcou_Check, check));
 	}
 	
 	public void selecionouRadio(String radio){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Selecionou_Radio, radio));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Selecionou_Radio, radio));
 	}
 	
 	public void selecionouRegistro(String registro){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Selecionou_Registro, registro));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Selecionou_Registro, registro));
 	}
 	
 	public void selecionouArquivo(String arquivo){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Selecionou_Arquivo, arquivo));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Selecionou_Arquivo, arquivo));
 	}
 	
 	public void verificouMensagemEsperada(String mensagem){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Mensagem_Validacao, mensagem));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Mensagem_Validacao, mensagem));
 	}
 	
 	public void verificouMensagemEsperadaTempoAtendimento(String mensagem){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Mensagem_Validacao_Tempo_Atendimento, mensagem));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Mensagem_Validacao_Tempo_Atendimento, mensagem));
 	}
 	
 	public void verificouMensagemNaoEsperada(String mensagem){
-		Log.info(MensagemUtil.getMensagem(EnumMensagens.MSG_Mensagem_Nao_Esperada, mensagem));
+		Log.infoLog(MensagemUtil.getMensagem(EnumMensagens.MSG_Mensagem_Nao_Esperada, mensagem));
 	}
 	
 	public void verificouItemLista(String valor){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Verifica_Existencia_Item_Lista, valor));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Verifica_Existencia_Item_Lista, valor));
 	}
 	
 	public void clicouMenu(String menu){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Menu, menu));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Menu, menu));
 	}
 	
 	public void clicouSubMenu(String subMenu){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_SubMenu, subMenu));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_SubMenu, subMenu));
 	}
 	
 	public void clicouItemSubMenu(String itemSubMenu){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_ItemSubMenu, itemSubMenu));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_ItemSubMenu, itemSubMenu));
 	}
 	
 	public void selecionouCombo(String valor, String valor2){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Selecionar_Combo, valor2, valor));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Selecionar_Combo, valor2, valor));
 	}
 	
 	public void selecionouArquivo(){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Selecionar_Arquivo));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Selecionar_Arquivo));
 	}
 	
 	public void clicouLink(String link){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Link, link));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Link, link));
 	}
 	
 	public void clicouAba(String aba){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Aba, aba));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Aba, aba));
 	}
 	
 	public void clicouFlag(String flag, String tela){
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Flag, flag, tela));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Clicou_Flag, flag, tela));
+	}
+	
+	public void clicouPaginacao(String paginacao, String tela){
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Paginacao, paginacao, tela));
 	}
 
 }

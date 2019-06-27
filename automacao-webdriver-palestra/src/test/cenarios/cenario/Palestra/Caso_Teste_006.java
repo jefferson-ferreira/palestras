@@ -11,12 +11,12 @@ import apresentacao_palestra.GenericCenario;
 import driver.AutomacaoRunner;
 
 /**
- * Enviar os dados informando todos os campos.
+ * Validar a obrigatóriedade do campo "CPF".
  * 
- * @since 28/12/2018
+ * @since 25/01/2019
  */
 @RunWith(AutomacaoRunner.class)
-public class Caso_Teste_001 extends GenericCenario {
+public class Caso_Teste_006 extends GenericCenario {
 	@Test
 	public void casoTeste() throws Exception{
 		super.casoTeste("envioDados");

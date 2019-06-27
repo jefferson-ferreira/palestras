@@ -3,16 +3,19 @@
  */
 package apresentacao_palestra;
 
-import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.BeforeClass;
 import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
 
 import dominio.EnumLog;
+import dominio.EnumLogManualUsuario;
 import driver.AbstractCenario;
+import log.Log;
+import massadedados.LerXls;
 import parametrizacao.ParametroUtil;
 import util.MensagemLog;
+import util.MensagemLogManualUsuario;
 
 /**
  * Classe que herda os metodos de inicialização da automação e passa a URL para o browser.
@@ -22,15 +25,26 @@ import util.MensagemLog;
 public class GenericCenario extends AbstractCenario {
 
 	private static String MAIN_URL = ParametroUtil.getValueAsString("url");
+	LerXls xls = new LerXls();
 
-	private static Logger Log = Logger.getLogger("Inicializando");
-
+	public void casoTeste(String pathRTA) throws Exception{
+		//GenericPageObject genericPageObject = new GenericPageObject();
+		GenericType genericType = new GenericType();
+		ExecucaoPassos execucao = new ExecucaoPassos();
+		LerXls.setCasoTeste(AbstractCenario.getCasoDeTesteAtual().getDeclaringClass().getSimpleName().toString());
+		execucao.pathRTA(pathRTA);
+		//genericPageObject.acessarMenu();
+		genericType.valoresRTA(xls.lerPlanilhaElementos());
+	}
+	
 	@BeforeClass
 	public static void inicializarAutomacao() {
 		// Fornecer as definições de configuração do Log4j
 		DOMConfigurator.configure(GenericCenario.class.getResource("/util/log4j.xml"));
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Inicializou_Navegador, ParametroUtil.getValueAsString("browser")));
-		Log.info(MensagemLog.getMensagem(EnumLog.MSG_Informou_URL) + MAIN_URL);
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Inicializou_Navegador, ParametroUtil.getValueAsString("browser")));
+		Log.infoManualUsuario(MensagemLogManualUsuario.getMensagem(EnumLogManualUsuario.MSG_Inicializar_Navegador, ParametroUtil.getValueAsString("browser")));
+		Log.infoLog(MensagemLog.getMensagem(EnumLog.MSG_Informou_URL) + MAIN_URL);
+		Log.infoManualUsuario(MensagemLogManualUsuario.getMensagem(EnumLogManualUsuario.MSG_Informar_URL) + MAIN_URL);
 		webDriver.manage().window().maximize();
 		webDriver.navigate().to(MAIN_URL);
 	}
@@ -55,5 +69,4 @@ public class GenericCenario extends AbstractCenario {
 		jUnitCore.run(classe);
 		System.exit(0);
 	}
-
 }

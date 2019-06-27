@@ -1,31 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
  
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
- 
-<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
- 
-<appender name="fileAppender" class="org.apache.log4j.FileAppender">
- 
-<param name="Threshold" value="INFO" />
 
-<param name="ImmediateFlush" value="true" />
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
 
-<param name="File" value="./log//Log.log" />
- 
-<layout class="org.apache.log4j.PatternLayout">
- 
-<param name="ConversionPattern" value="%-2d{dd/MM/yy  HH:mm:ss  aaa} – %m %n" />
- 
-</layout>
- 
-</appender>
+	<appender name="fileAppender" class="org.apache.log4j.FileAppender">
 
-<root>
+		<param name="Threshold" value="INFO" />
 
-<level value="INFO"/>
- 
-<appender-ref ref="fileAppender"/>
- 
-</root>
- 
+		<param name="ImmediateFlush" value="true" />
+
+		<param name="File" value="./log//Log.log" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+
+			<param name="ConversionPattern" value="%-2d{dd/MM/yy  HH:mm:ss  aaa} – %m %n" />
+
+		</layout>
+
+	</appender>
+
+	<appender name="fileAppender2" class="org.apache.log4j.FileAppender">
+
+		<param name="Threshold" value="INFO" />
+
+		<param name="ImmediateFlush" value="true" />
+
+		<param name="File" value="./log//LogManualUsuario.log" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+
+			<param name="ConversionPattern" value="%m %n" />
+
+		</layout>
+
+	</appender>
+
+	<logger name="log">
+		<level value="INFO" />
+		<appender-ref ref="fileAppender" />
+	</logger>
+
+	<logger name="logManualUsuario">
+		<level value="INFO" />
+		<appender-ref ref="fileAppender2" />
+	</logger>
+
 </log4j:configuration>
