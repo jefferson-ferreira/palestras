@@ -1,13 +1,13 @@
 /**
  * 
  */
-package cenario.Palestra;
+package cenario.Apresentacao;
 
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import apresentacao_palestra.GenericCenario;
+import apresentacao_apresentacao.GenericCenario;
 import driver.AutomacaoRunner;
 
 /**
@@ -16,7 +16,7 @@ import driver.AutomacaoRunner;
  * @since 25/01/2019
  */
 @RunWith(AutomacaoRunner.class)
-public class Caso_Teste_005 extends GenericCenario {
+public class Caso_Teste_003 extends GenericCenario {
 	@Test
 	public void casoTeste() throws Exception{
 		super.casoTeste("envioDados");

@@ -1,13 +1,13 @@
 /**
  * 
  */
-package cenario.Palestra;
+package cenario.Apresentacao;
 
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import apresentacao_palestra.GenericCenario;
+import apresentacao_apresentacao.GenericCenario;
 import driver.AutomacaoRunner;
 
 /**

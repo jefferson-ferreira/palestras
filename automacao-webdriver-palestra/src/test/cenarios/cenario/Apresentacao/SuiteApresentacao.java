@@ -1,12 +1,12 @@
 /**
  * 
  */
-package cenario.Palestra;
+package cenario.Apresentacao;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import apresentacao_palestra.GenericCenario;
+import apresentacao_apresentacao.GenericCenario;
 import driver.AutomacaoRunner;
 import precondicoes.PreCondicao;
 import precondicoes.PreCondicoes;
@@ -17,7 +17,7 @@ import precondicoes.PreCondicoes;
  * @since 28/12/2018
  */
 @RunWith(AutomacaoRunner.class)
-public class SuitePalestra extends GenericCenario{
+public class SuiteApresentacao extends GenericCenario{
 	
 	@Test
 	@PreCondicoes(preCondicoes = {

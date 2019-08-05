@@ -1,4 +1,4 @@
-package apresentacao_palestra;
+package apresentacao_apresentacao;
 
 import java.util.ArrayList;
 import java.util.List;

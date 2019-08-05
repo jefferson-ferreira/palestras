@@ -8,8 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import apresentacao_palestra.GenericPageObject;
-import apresentacao_palestra.WebDriverSingleton;
+import apresentacao_apresentacao.GenericPageObject;
+import apresentacao_apresentacao.WebDriverSingleton;
 import dominio.EnumLog;
 import parametrizacao.ParametroUtil;
 import util.MensagemLog;

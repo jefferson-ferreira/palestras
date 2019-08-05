@@ -1,7 +1,7 @@
 /**
  * 
  */
-package apresentacao_palestra;
+package apresentacao_apresentacao;
 
 import verificacao.Verify;
 
@@ -12,6 +12,6 @@ import verificacao.Verify;
  * @since 28/12/2018
  * 
  */
-public class VerifyPalestra extends Verify {
+public class VerifyApresentacao extends Verify {
 
 }

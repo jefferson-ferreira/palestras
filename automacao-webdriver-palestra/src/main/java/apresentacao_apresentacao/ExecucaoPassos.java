@@ -1,7 +1,7 @@
 /**
  * 
  */
-package apresentacao_palestra;
+package apresentacao_apresentacao;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;

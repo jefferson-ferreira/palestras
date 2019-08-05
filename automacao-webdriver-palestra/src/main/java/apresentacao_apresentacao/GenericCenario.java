@@ -1,7 +1,7 @@
 /**
  * 
  */
-package apresentacao_palestra;
+package apresentacao_apresentacao;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.junit.BeforeClass;

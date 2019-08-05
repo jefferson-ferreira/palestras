@@ -1,4 +1,4 @@
-package apresentacao_palestra;
+package apresentacao_apresentacao;
 
 import java.awt.Rectangle;
 import java.awt.Robot;
@@ -193,7 +193,7 @@ public class GenericPageObject extends AbstractCenario{
 		((JavascriptExecutor) webDriver).executeScript(
 				"arguments[0].scrollIntoView({block: \"end\", behavior: \"auto\"});", GenericType.getElemento());
 		if(recuperarDescricaoClasse().contains("Suite") && !AbstractCenario.getPosCondicao() && !AbstractCenario.getPreCondicao()) {
-			VerifyPalestra.assertEquals(
+			VerifyApresentacao.assertEquals(
 					msg.obterMsgComparacaoCampo(GenericType.getValorRTA(), recuperarCasoTeste()),
 					GenericType.getValorEsperadoElemento(), GenericType.getElemento().getAttribute("value"));
 			log.comparouCampo(GenericType.getValorRTA(), xls.lerPlan().replace("Módulo: ", ""));
@@ -218,7 +218,7 @@ public class GenericPageObject extends AbstractCenario{
 		((JavascriptExecutor) webDriver).executeScript(
 				"arguments[0].scrollIntoView({block: \"end\", behavior: \"auto\"});", GenericType.getElemento());
 		if(recuperarDescricaoClasse().contains("Suite") && !AbstractCenario.getPosCondicao() && !AbstractCenario.getPreCondicao()) {
-			VerifyPalestra.assertEquals(
+			VerifyApresentacao.assertEquals(
 					msg.obterMsgComparacaoCampo(GenericType.getValorRTA(),
 							recuperarCasoTeste()),
 					GenericType.getValorEsperadoElemento(), GenericType.getElemento().getAttribute("value"));
@@ -234,7 +234,7 @@ public class GenericPageObject extends AbstractCenario{
 			((JavascriptExecutor) webDriver).executeScript(
 					"arguments[0].scrollIntoView({block: \"end\", behavior: \"auto\"});", GenericType.getElemento());
 			if(recuperarDescricaoClasse().contains("Suite") && !AbstractCenario.getPosCondicao() && !AbstractCenario.getPreCondicao()) {
-				VerifyPalestra.assertEquals(
+				VerifyApresentacao.assertEquals(
 						msg.obterMsgComparacaoCampo(GenericType.getValorRTA(),
 								recuperarCasoTeste()),
 						GenericType.getValorEsperadoElemento(), GenericType.getElemento().getAttribute("value"));
@@ -257,11 +257,11 @@ public class GenericPageObject extends AbstractCenario{
 			((JavascriptExecutor) webDriver).executeScript(
 					"arguments[0].scrollIntoView({block: \"end\", behavior: \"auto\"});", GenericType.getElemento());
 			if(GenericType.getElemento().getAttribute("value") == null) {
-				VerifyPalestra.assertEquals(
+				VerifyApresentacao.assertEquals(
 						msg.obterMsgComparacaoCampo(GenericType.getValorRTA(), recuperarCasoTeste()),
 						GenericType.getValor(), GenericType.getElemento().getText());
 			}else {
-				VerifyPalestra.assertEquals(
+				VerifyApresentacao.assertEquals(
 						msg.obterMsgComparacaoCampo(GenericType.getValorRTA(),
 								recuperarCasoTeste()),
 						GenericType.getValor(), GenericType.getElemento().getAttribute("value"));
@@ -378,7 +378,7 @@ public class GenericPageObject extends AbstractCenario{
 						Integer.parseInt(GenericType.getValorEsperadoElemento().replace("D", "").replace(" ", "")), 0, 0));
 			}
 			if(recuperarDescricaoClasse().contains("Suite") && !AbstractCenario.getPosCondicao() && !AbstractCenario.getPreCondicao()) {
-				VerifyPalestra.assertEquals(
+				VerifyApresentacao.assertEquals(
 						msg.obterMsgComparacaoCampo(GenericType.getValorRTA(),
 								recuperarCasoTeste()),
 						GenericType.getValorEsperadoElemento(), GenericType.getElemento().getAttribute("value"));
@@ -421,7 +421,7 @@ public class GenericPageObject extends AbstractCenario{
 						Integer.parseInt(GenericType.getValorEsperadoElemento().replace("D", "").replace(" ", "")), 0, 0));
 			}
 			if(recuperarDescricaoClasse().contains("Suite") && !AbstractCenario.getPosCondicao() && !AbstractCenario.getPreCondicao()) {
-				VerifyPalestra.assertEquals(
+				VerifyApresentacao.assertEquals(
 						msg.obterMsgComparacaoCampo(GenericType.getValorRTA(),
 								recuperarCasoTeste()),
 						GenericType.getValorEsperadoElemento(), GenericType.getElemento().getText());
@@ -492,7 +492,7 @@ public class GenericPageObject extends AbstractCenario{
 			((JavascriptExecutor) webDriver).executeScript(
 					"arguments[0].scrollIntoView({block: \"end\", behavior: \"auto\"});", GenericType.getElemento());
 			delay(500);
-			VerifyPalestra.assertEquals(
+			VerifyApresentacao.assertEquals(
 					msg.obterMsgComparacaoCombo(GenericType.getValorRTA().split("_")[0], recuperarCasoTeste()),
 					GenericType.getValorEsperadoElemento(), getCombo(GenericType.getElemento()));
 			log.comparouCombo(xls.lerPlan().replace("Módulo: ", ""), GenericType.getValorRTA().split("_")[0]);
@@ -521,7 +521,7 @@ public class GenericPageObject extends AbstractCenario{
 			((JavascriptExecutor) webDriver).executeScript(
 					"arguments[0].scrollIntoView({block: \"end\", behavior: \"auto\"});", GenericType.getElemento());
 			if(recuperarDescricaoClasse().contains("Suite") && !AbstractCenario.getPosCondicao() && !AbstractCenario.getPreCondicao()) {
-				VerifyPalestra.assertEquals(
+				VerifyApresentacao.assertEquals(
 						msg.obterMsgComparacaoCheck(GenericType.getValorRTA(), recuperarCasoTeste(), 
 								xls.lerPlan().replace("Módulo: ", "")), GenericType.getValorEsperadoElemento().toLowerCase(), situacaoCheck);
 				log.comparouCheck(xls.lerPlan().replace("Módulo: ", ""), GenericType.getValorRTA());
@@ -653,7 +653,7 @@ public class GenericPageObject extends AbstractCenario{
 	public void mensagem() {
 		try {
 			delay(500);
-			VerifyPalestra.assertEquals(msg.obterMsgMensagemNaoEsperada(GenericType.getValor()), GenericType.getValor(),
+			VerifyApresentacao.assertEquals(msg.obterMsgMensagemNaoEsperada(GenericType.getValor()), GenericType.getValor(),
 					GenericType.getElemento().getText().replace("×\n", ""));
 			log.verificouMensagemEsperada(GenericType.getValor());
 		} catch (NoSuchElementException nsee) {
@@ -665,7 +665,7 @@ public class GenericPageObject extends AbstractCenario{
 	public void popup() {
 		String[] valores = GenericType.getValor().split("-");
 		try {
-			VerifyPalestra.assertEquals(msg.obterMsgMensagemNaoEsperada(valores[0]), valores[0],
+			VerifyApresentacao.assertEquals(msg.obterMsgMensagemNaoEsperada(valores[0]), valores[0],
 					fecharAlertaRecuperarTexto(valores[1]));
 			log.verificouMensagemEsperada(valores[0]);
 		} catch (NoSuchElementException nsee) {

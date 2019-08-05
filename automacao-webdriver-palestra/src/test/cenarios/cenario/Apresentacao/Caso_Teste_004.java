@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cenario.Palestra;
+package cenario.Apresentacao;
 
 
 import org.junit.Assert;
